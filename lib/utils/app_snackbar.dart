@@ -73,7 +73,7 @@ class AppSnackbar {
         ],
       ),
       backgroundColor: backgroundColor,
-      duration: const Duration(minutes: 2),
+      duration: const Duration(seconds: 3),
       showCloseIcon: true,
       closeIconColor: Colors.white,
     );

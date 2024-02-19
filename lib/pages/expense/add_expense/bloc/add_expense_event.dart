@@ -18,4 +18,6 @@ class AddExpenseEvent with _$AddExpenseEvent {
       _UpdateCoA;
   const factory AddExpenseEvent.updateCustomer(Customer value) =
       _UpdateCustomer;
+  const factory AddExpenseEvent.updateExpense(List<Expense> values) =
+      _UpdateExpenses;
 }

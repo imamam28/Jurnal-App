@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:journal/models/coa.dart';
 import 'package:journal/models/customer.dart';
@@ -36,6 +36,9 @@ class AddExpenseBloc extends Bloc<AddExpenseEvent, AddExpenseState> {
     );
     on<_UpdateCustomer>(
       (event, emit) => emit(state.copyWith(customer: event.value)),
+    );
+    on<_UpdateExpenses>(
+      (event, emit) => emit(state.copyWith(expenses: event.values)),
     );
   }
 }

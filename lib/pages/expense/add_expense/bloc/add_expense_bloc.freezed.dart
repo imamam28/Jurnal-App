@@ -26,6 +26,7 @@ mixin _$AddExpenseEvent {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +39,7 @@ mixin _$AddExpenseEvent {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +52,7 @@ mixin _$AddExpenseEvent {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -64,6 +67,7 @@ mixin _$AddExpenseEvent {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +80,7 @@ mixin _$AddExpenseEvent {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,6 +93,7 @@ mixin _$AddExpenseEvent {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -185,6 +191,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateTransactionDate(date);
   }
@@ -200,6 +207,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateTransactionDate?.call(date);
   }
@@ -215,6 +223,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateTransactionDate != null) {
@@ -235,6 +244,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateTransactionDate(this);
   }
@@ -250,6 +260,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateTransactionDate?.call(this);
   }
@@ -265,6 +276,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateTransactionDate != null) {
@@ -356,6 +368,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateDueDate(date);
   }
@@ -371,6 +384,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateDueDate?.call(date);
   }
@@ -386,6 +400,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateDueDate != null) {
@@ -406,6 +421,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateDueDate(this);
   }
@@ -421,6 +437,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateDueDate?.call(this);
   }
@@ -436,6 +453,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateDueDate != null) {
@@ -527,6 +545,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateNoExpense(value);
   }
@@ -542,6 +561,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateNoExpense?.call(value);
   }
@@ -557,6 +577,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateNoExpense != null) {
@@ -577,6 +598,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateNoExpense(this);
   }
@@ -592,6 +614,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateNoExpense?.call(this);
   }
@@ -607,6 +630,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateNoExpense != null) {
@@ -698,6 +722,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateCanPayLater(value);
   }
@@ -713,6 +738,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateCanPayLater?.call(value);
   }
@@ -728,6 +754,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateCanPayLater != null) {
@@ -748,6 +775,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateCanPayLater(this);
   }
@@ -763,6 +791,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateCanPayLater?.call(this);
   }
@@ -778,6 +807,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateCanPayLater != null) {
@@ -869,6 +899,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updatePaymentMethod(value);
   }
@@ -884,6 +915,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updatePaymentMethod?.call(value);
   }
@@ -899,6 +931,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updatePaymentMethod != null) {
@@ -919,6 +952,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updatePaymentMethod(this);
   }
@@ -934,6 +968,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updatePaymentMethod?.call(this);
   }
@@ -949,6 +984,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updatePaymentMethod != null) {
@@ -1041,6 +1077,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateTermOfPayment(value);
   }
@@ -1056,6 +1093,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateTermOfPayment?.call(value);
   }
@@ -1071,6 +1109,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateTermOfPayment != null) {
@@ -1091,6 +1130,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateTermOfPayment(this);
   }
@@ -1106,6 +1146,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateTermOfPayment?.call(this);
   }
@@ -1121,6 +1162,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateTermOfPayment != null) {
@@ -1212,6 +1254,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateCoA(value);
   }
@@ -1227,6 +1270,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateCoA?.call(value);
   }
@@ -1242,6 +1286,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateCoA != null) {
@@ -1262,6 +1307,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateCoA(this);
   }
@@ -1277,6 +1323,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateCoA?.call(this);
   }
@@ -1292,6 +1339,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateCoA != null) {
@@ -1383,6 +1431,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
     required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
   }) {
     return updateCustomer(value);
   }
@@ -1398,6 +1447,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
     TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
   }) {
     return updateCustomer?.call(value);
   }
@@ -1413,6 +1463,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
     TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateCustomer != null) {
@@ -1433,6 +1484,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
     required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
   }) {
     return updateCustomer(this);
   }
@@ -1448,6 +1500,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
     TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
   }) {
     return updateCustomer?.call(this);
   }
@@ -1463,6 +1516,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
     TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
     required TResult orElse(),
   }) {
     if (updateCustomer != null) {
@@ -1478,6 +1532,190 @@ abstract class _UpdateCustomer implements AddExpenseEvent {
   Customer get value;
   @JsonKey(ignore: true)
   _$$UpdateCustomerImplCopyWith<_$UpdateCustomerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateExpensesImplCopyWith<$Res> {
+  factory _$$UpdateExpensesImplCopyWith(_$UpdateExpensesImpl value,
+          $Res Function(_$UpdateExpensesImpl) then) =
+      __$$UpdateExpensesImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Expense> values});
+}
+
+/// @nodoc
+class __$$UpdateExpensesImplCopyWithImpl<$Res>
+    extends _$AddExpenseEventCopyWithImpl<$Res, _$UpdateExpensesImpl>
+    implements _$$UpdateExpensesImplCopyWith<$Res> {
+  __$$UpdateExpensesImplCopyWithImpl(
+      _$UpdateExpensesImpl _value, $Res Function(_$UpdateExpensesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? values = null,
+  }) {
+    return _then(_$UpdateExpensesImpl(
+      null == values
+          ? _value._values
+          : values // ignore: cast_nullable_to_non_nullable
+              as List<Expense>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateExpensesImpl implements _UpdateExpenses {
+  const _$UpdateExpensesImpl(final List<Expense> values) : _values = values;
+
+  final List<Expense> _values;
+  @override
+  List<Expense> get values {
+    if (_values is EqualUnmodifiableListView) return _values;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_values);
+  }
+
+  @override
+  String toString() {
+    return 'AddExpenseEvent.updateExpense(values: $values)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateExpensesImpl &&
+            const DeepCollectionEquality().equals(other._values, _values));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_values));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateExpensesImplCopyWith<_$UpdateExpensesImpl> get copyWith =>
+      __$$UpdateExpensesImplCopyWithImpl<_$UpdateExpensesImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(DateTime date) updateTransactionDate,
+    required TResult Function(DateTime date) updateDueDate,
+    required TResult Function(String value) updateNoExpense,
+    required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(PaymentMethod value) updatePaymentMethod,
+    required TResult Function(TermOfPayment value) updateTermOfPayment,
+    required TResult Function(CoA value) updateCoA,
+    required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
+  }) {
+    return updateExpense(values);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(DateTime date)? updateTransactionDate,
+    TResult? Function(DateTime date)? updateDueDate,
+    TResult? Function(String value)? updateNoExpense,
+    TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(PaymentMethod value)? updatePaymentMethod,
+    TResult? Function(TermOfPayment value)? updateTermOfPayment,
+    TResult? Function(CoA value)? updateCoA,
+    TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
+  }) {
+    return updateExpense?.call(values);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(DateTime date)? updateTransactionDate,
+    TResult Function(DateTime date)? updateDueDate,
+    TResult Function(String value)? updateNoExpense,
+    TResult Function(bool value)? updateCanPayLater,
+    TResult Function(PaymentMethod value)? updatePaymentMethod,
+    TResult Function(TermOfPayment value)? updateTermOfPayment,
+    TResult Function(CoA value)? updateCoA,
+    TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
+    required TResult orElse(),
+  }) {
+    if (updateExpense != null) {
+      return updateExpense(values);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UpdateTransactionDate value)
+        updateTransactionDate,
+    required TResult Function(_UpdateDueDate value) updateDueDate,
+    required TResult Function(_UpdateNoExpense value) updateNoExpense,
+    required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
+    required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
+    required TResult Function(_UpdateCoA value) updateCoA,
+    required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
+  }) {
+    return updateExpense(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UpdateTransactionDate value)? updateTransactionDate,
+    TResult? Function(_UpdateDueDate value)? updateDueDate,
+    TResult? Function(_UpdateNoExpense value)? updateNoExpense,
+    TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
+    TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
+    TResult? Function(_UpdateCoA value)? updateCoA,
+    TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
+  }) {
+    return updateExpense?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UpdateTransactionDate value)? updateTransactionDate,
+    TResult Function(_UpdateDueDate value)? updateDueDate,
+    TResult Function(_UpdateNoExpense value)? updateNoExpense,
+    TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
+    TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
+    TResult Function(_UpdateCoA value)? updateCoA,
+    TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
+    required TResult orElse(),
+  }) {
+    if (updateExpense != null) {
+      return updateExpense(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateExpenses implements AddExpenseEvent {
+  const factory _UpdateExpenses(final List<Expense> values) =
+      _$UpdateExpensesImpl;
+
+  List<Expense> get values;
+  @JsonKey(ignore: true)
+  _$$UpdateExpensesImplCopyWith<_$UpdateExpensesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,9 +8,13 @@ import 'package:journal/const/app_color.dart';
 import 'package:journal/models/coa.dart';
 import 'package:journal/models/payment_method.dart';
 import 'package:journal/models/term_of_payment.dart';
+import 'package:journal/pages/expense/select_expense/select_expense_page.dart';
+import 'package:journal/pages/expense/set_expense/bloc/set_expense_bloc.dart';
+import 'package:journal/pages/expense/set_expense/set_expense_page.dart';
 import 'package:journal/pages/select_customer/select_customer_page.dart';
 import 'package:journal/utils/app_snackbar.dart';
 import 'package:journal/utils/formatter/date_formatter.dart';
+import 'package:journal/utils/formatter/number_formatter.dart';
 import 'package:journal/widgets/bottomsheet/app_bottom_sheet.dart';
 import 'package:journal/widgets/form_widget.dart';
 import 'package:journal/widgets/switch_widget.dart';
@@ -42,7 +48,10 @@ class _AddExpensePageState extends State<AddExpensePage> {
               foregroundColor: AppColor.white,
             ),
             onPressed: () {
-              // TODO: Add create action
+              AppSnackbar.warning(
+                context,
+                'Undeveloped. Dummy project',
+              );
             },
             child: const Text('Buat'),
           ),
@@ -83,8 +92,9 @@ class _AddExpensePageState extends State<AddExpensePage> {
                           ),
                         ).then((value) {
                           if (value != null) {
-                            context.read<AddExpenseBloc>().add(
-                                AddExpenseEvent.updateCustomer(value));
+                            context
+                                .read<AddExpenseBloc>()
+                                .add(AddExpenseEvent.updateCustomer(value));
                           }
                         });
                       },
@@ -379,49 +389,162 @@ class _AddExpensePageState extends State<AddExpensePage> {
               ),
             ),
             const SizedBox(height: 24),
-            Padding(
-              padding: const EdgeInsets.only(left: 24),
-              child: Text(
-                'Biaya',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ),
-            const SizedBox(height: 12),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: DottedBorder(
-                color: AppColor.accent.shade700,
-                strokeWidth: 1,
-                dashPattern: const [6],
-                borderType: BorderType.RRect,
-                radius: const Radius.circular(16),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  width: double.maxFinite,
-                  decoration: BoxDecoration(
-                    color: AppColor.white.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
+            BlocBuilder<AddExpenseBloc, AddExpenseState>(
+              buildWhen: (previous, current) =>
+                  previous.expenses != current.expenses,
+              builder: (context, state) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Column(
                     children: [
-                      Text(
-                        'Pilih biaya',
-                        style: TextStyle(
-                          color: AppColor.accent.shade700,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Biaya',
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          if (state.expenses.isNotEmpty)
+                            TextButton(
+                              style: TextButton.styleFrom(
+                                  foregroundColor: AppColor.accent.shade700),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return BlocProvider(
+                                        create: (context) => SetExpenseBloc(),
+                                        child: SetExpensePage(
+                                          currentExpenses: state.expenses,
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ).then((value) {
+                                  if (value != null) {
+                                    context.read<AddExpenseBloc>().add(
+                                        AddExpenseEvent.updateExpense(value));
+                                  }
+                                });
+                              },
+                              child: const Text('Ubah'),
+                            ),
+                        ],
                       ),
-                      Text(
-                        'dari Daftar Akun',
-                        style: TextStyle(
-                          color: AppColor.grey.withOpacity(0.6),
-                          fontSize: 12,
+                      const SizedBox(height: 12),
+                      ListView.separated(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        separatorBuilder: (context, index) =>
+                            const SizedBox(height: 8),
+                        itemCount: state.expenses.length,
+                        itemBuilder: (context, index) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    state.expenses[index].name,
+                                    style: TextStyle(
+                                      color: AppColor.accent.shade700,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    NumberFormatter.formatCurrency(
+                                      state.expenses[index].cost,
+                                    ),
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              if (state.expenses[index].note.isNotEmpty)
+                                Text(state.expenses[index].note),
+                            ],
+                          );
+                        },
+                      ),
+                      if (state.expenses.isNotEmpty) const SizedBox(height: 16),
+                      InkWell(
+                        borderRadius: BorderRadius.circular(16),
+                        onTap: () async {
+                          final value = await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return SelectExpensePage(
+                                  currentExpenses: state.expenses,
+                                );
+                              },
+                            ),
+                          );
+                          if (value != null) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return BlocProvider(
+                                    create: (context) => SetExpenseBloc(),
+                                    child: SetExpensePage(
+                                      currentExpenses: state.expenses,
+                                      newExpense: value,
+                                    ),
+                                  );
+                                },
+                              ),
+                            ).then((value) {
+                              if (value != null) {
+                                context
+                                    .read<AddExpenseBloc>()
+                                    .add(AddExpenseEvent.updateExpense(value));
+                              }
+                            });
+                          }
+                        },
+                        child: DottedBorder(
+                          color: AppColor.accent.shade700,
+                          strokeWidth: 1,
+                          dashPattern: const [6],
+                          borderType: BorderType.RRect,
+                          radius: const Radius.circular(16),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            width: double.maxFinite,
+                            decoration: BoxDecoration(
+                              color: AppColor.white.withOpacity(0.3),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Pilih biaya',
+                                  style: TextStyle(
+                                    color: AppColor.accent.shade700,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'dari Daftar Akun',
+                                  style: TextStyle(
+                                    color: AppColor.grey.withOpacity(0.6),
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
-                ),
-              ),
+                );
+              },
             ),
             const SizedBox(height: 16),
             Container(
@@ -463,7 +586,7 @@ class _AddExpensePageState extends State<AddExpensePage> {
                       bottom: 12,
                     ),
                     child: const _DetailWidget(
-                      label: 'Jumlah lainnya',
+                      label: 'Pemotongan',
                       labelStyle: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: AppColor.accent,
@@ -501,6 +624,12 @@ class _AddExpensePageState extends State<AddExpensePage> {
                       color: AppColor.accent.shade700,
                       fontSize: 16,
                     ),
+                    onTap: () {
+                      AppSnackbar.warning(
+                        context,
+                        'Undeveloped. Dummy project',
+                      );
+                    },
                   ),
                   const SizedBox(height: 12),
                   Align(
@@ -537,6 +666,7 @@ class _DetailWidget extends StatelessWidget {
   final TextStyle? valueStyle;
   final bool showIcon;
   final bool isShow;
+  final void Function()? onTap;
   const _DetailWidget({
     required this.label,
     required this.value,
@@ -544,41 +674,45 @@ class _DetailWidget extends StatelessWidget {
     this.valueStyle,
     this.showIcon = false,
     this.isShow = false,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 24,
-        vertical: 4,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            label,
-            style: labelStyle ??
-                const TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-          if (showIcon)
-            Icon(
-              isShow
-                  ? Icons.keyboard_arrow_up_rounded
-                  : Icons.keyboard_arrow_down_rounded,
-              color: AppColor.accent,
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: 4,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              label,
+              style: labelStyle ??
+                  const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
-          const Spacer(),
-          Text(
-            value,
-            style: valueStyle ??
-                const TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-          ),
-        ],
+            if (showIcon)
+              Icon(
+                isShow
+                    ? Icons.keyboard_arrow_up_rounded
+                    : Icons.keyboard_arrow_down_rounded,
+                color: AppColor.accent,
+              ),
+            const Spacer(),
+            Text(
+              value,
+              style: valueStyle ??
+                  const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
+          ],
+        ),
       ),
     );
   }

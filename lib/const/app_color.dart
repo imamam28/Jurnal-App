@@ -4,8 +4,9 @@ class AppColor {
   AppColor._();
 
   static const Color white = Colors.white;
+  static const Color grey = Colors.grey;
   static const Color black = Colors.black;
-  
+
   static const MaterialColor primary = MaterialColor(_primaryValue, <int, Color>{
   50: Color(0xFFE0E6E8),
   100: Color(0xFFB3C1C5),
@@ -21,6 +22,7 @@ class AppColor {
 static const int _primaryValue = 0xFF00303C;
 
 static const MaterialColor accent = MaterialColor(_accentValue, <int, Color>{
+  50: Color(0xFF58C3FF),
   100: Color(0xFF58C3FF),
   200: Color(_accentValue),
   400: Color(0xFF009BF1),

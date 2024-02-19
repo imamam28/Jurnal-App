@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:journal/const/app_const.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:journal/pages/expense/add_expense/add_expense_page.dart';
+import 'package:journal/pages/expense/add_expense/bloc/add_expense_bloc.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,7 +20,17 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: ElevatedButton.icon(
           icon: const Icon(Icons.add),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => BlocProvider(
+                  create: (context) => AddExpenseBloc(),
+                  child: const AddExpensePage(),
+                ),
+              ),
+            );
+          },
           label: const Text('Buat Biaya Baru'),
         ),
       ),

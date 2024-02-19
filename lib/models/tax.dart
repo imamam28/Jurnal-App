@@ -6,6 +6,6 @@ class Tax {
 }
 
 List<Tax> dummyTax = [
-  Tax(id: 1, name: 'Bank Transfer'),
-  Tax(id: 2, name: 'Bank Transfer 2'),
+  Tax(id: 1, name: 'None'),
+  Tax(id: 2, name: 'PPN 11%'),
 ];

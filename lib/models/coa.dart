@@ -6,6 +6,6 @@ class CoA {
 }
 
 List<CoA> dummyCoA = [
-  CoA(id: 1, name: 'Bank Transfer'),
-  CoA(id: 2, name: 'Bank Transfer 2'),
+  CoA(id: 1, name: 'Cash'),
+  CoA(id: 2, name: 'Ban Account'),
 ];

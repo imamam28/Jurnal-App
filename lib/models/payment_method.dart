@@ -7,5 +7,7 @@ class PaymentMethod {
 
 List<PaymentMethod> dummyPayments = [
   PaymentMethod(id: 1, name: 'Bank Transfer'),
-  PaymentMethod(id: 2, name: 'Bank Transfer 2'),
+  PaymentMethod(id: 2, name: 'Cash'),
+  PaymentMethod(id: 3, name: 'Check'),
+  PaymentMethod(id: 4, name: 'Credit Card'),
 ];

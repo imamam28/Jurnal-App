@@ -20,18 +20,21 @@ mixin _$SetExpenseEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(List<Expense> expenses) load,
     required TResult Function(int index) removeExpense,
+    required TResult Function(int index, Tax value) updateTax,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<Expense> expenses)? load,
     TResult? Function(int index)? removeExpense,
+    TResult? Function(int index, Tax value)? updateTax,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<Expense> expenses)? load,
     TResult Function(int index)? removeExpense,
+    TResult Function(int index, Tax value)? updateTax,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$SetExpenseEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Load value) load,
     required TResult Function(_RemoveExpense value) removeExpense,
+    required TResult Function(_UpdateTax value) updateTax,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Load value)? load,
     TResult? Function(_RemoveExpense value)? removeExpense,
+    TResult? Function(_UpdateTax value)? updateTax,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Load value)? load,
     TResult Function(_RemoveExpense value)? removeExpense,
+    TResult Function(_UpdateTax value)? updateTax,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -145,6 +151,7 @@ class _$LoadImpl implements _Load {
   TResult when<TResult extends Object?>({
     required TResult Function(List<Expense> expenses) load,
     required TResult Function(int index) removeExpense,
+    required TResult Function(int index, Tax value) updateTax,
   }) {
     return load(expenses);
   }
@@ -154,6 +161,7 @@ class _$LoadImpl implements _Load {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<Expense> expenses)? load,
     TResult? Function(int index)? removeExpense,
+    TResult? Function(int index, Tax value)? updateTax,
   }) {
     return load?.call(expenses);
   }
@@ -163,6 +171,7 @@ class _$LoadImpl implements _Load {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<Expense> expenses)? load,
     TResult Function(int index)? removeExpense,
+    TResult Function(int index, Tax value)? updateTax,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -176,6 +185,7 @@ class _$LoadImpl implements _Load {
   TResult map<TResult extends Object?>({
     required TResult Function(_Load value) load,
     required TResult Function(_RemoveExpense value) removeExpense,
+    required TResult Function(_UpdateTax value) updateTax,
   }) {
     return load(this);
   }
@@ -185,6 +195,7 @@ class _$LoadImpl implements _Load {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Load value)? load,
     TResult? Function(_RemoveExpense value)? removeExpense,
+    TResult? Function(_UpdateTax value)? updateTax,
   }) {
     return load?.call(this);
   }
@@ -194,6 +205,7 @@ class _$LoadImpl implements _Load {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Load value)? load,
     TResult Function(_RemoveExpense value)? removeExpense,
+    TResult Function(_UpdateTax value)? updateTax,
     required TResult orElse(),
   }) {
     if (load != null) {
@@ -278,6 +290,7 @@ class _$RemoveExpenseImpl implements _RemoveExpense {
   TResult when<TResult extends Object?>({
     required TResult Function(List<Expense> expenses) load,
     required TResult Function(int index) removeExpense,
+    required TResult Function(int index, Tax value) updateTax,
   }) {
     return removeExpense(index);
   }
@@ -287,6 +300,7 @@ class _$RemoveExpenseImpl implements _RemoveExpense {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<Expense> expenses)? load,
     TResult? Function(int index)? removeExpense,
+    TResult? Function(int index, Tax value)? updateTax,
   }) {
     return removeExpense?.call(index);
   }
@@ -296,6 +310,7 @@ class _$RemoveExpenseImpl implements _RemoveExpense {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<Expense> expenses)? load,
     TResult Function(int index)? removeExpense,
+    TResult Function(int index, Tax value)? updateTax,
     required TResult orElse(),
   }) {
     if (removeExpense != null) {
@@ -309,6 +324,7 @@ class _$RemoveExpenseImpl implements _RemoveExpense {
   TResult map<TResult extends Object?>({
     required TResult Function(_Load value) load,
     required TResult Function(_RemoveExpense value) removeExpense,
+    required TResult Function(_UpdateTax value) updateTax,
   }) {
     return removeExpense(this);
   }
@@ -318,6 +334,7 @@ class _$RemoveExpenseImpl implements _RemoveExpense {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Load value)? load,
     TResult? Function(_RemoveExpense value)? removeExpense,
+    TResult? Function(_UpdateTax value)? updateTax,
   }) {
     return removeExpense?.call(this);
   }
@@ -327,6 +344,7 @@ class _$RemoveExpenseImpl implements _RemoveExpense {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Load value)? load,
     TResult Function(_RemoveExpense value)? removeExpense,
+    TResult Function(_UpdateTax value)? updateTax,
     required TResult orElse(),
   }) {
     if (removeExpense != null) {
@@ -342,6 +360,154 @@ abstract class _RemoveExpense implements SetExpenseEvent {
   int get index;
   @JsonKey(ignore: true)
   _$$RemoveExpenseImplCopyWith<_$RemoveExpenseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateTaxImplCopyWith<$Res> {
+  factory _$$UpdateTaxImplCopyWith(
+          _$UpdateTaxImpl value, $Res Function(_$UpdateTaxImpl) then) =
+      __$$UpdateTaxImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, Tax value});
+}
+
+/// @nodoc
+class __$$UpdateTaxImplCopyWithImpl<$Res>
+    extends _$SetExpenseEventCopyWithImpl<$Res, _$UpdateTaxImpl>
+    implements _$$UpdateTaxImplCopyWith<$Res> {
+  __$$UpdateTaxImplCopyWithImpl(
+      _$UpdateTaxImpl _value, $Res Function(_$UpdateTaxImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? value = null,
+  }) {
+    return _then(_$UpdateTaxImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Tax,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateTaxImpl implements _UpdateTax {
+  const _$UpdateTaxImpl(this.index, this.value);
+
+  @override
+  final int index;
+  @override
+  final Tax value;
+
+  @override
+  String toString() {
+    return 'SetExpenseEvent.updateTax(index: $index, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateTaxImpl &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateTaxImplCopyWith<_$UpdateTaxImpl> get copyWith =>
+      __$$UpdateTaxImplCopyWithImpl<_$UpdateTaxImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Expense> expenses) load,
+    required TResult Function(int index) removeExpense,
+    required TResult Function(int index, Tax value) updateTax,
+  }) {
+    return updateTax(index, value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Expense> expenses)? load,
+    TResult? Function(int index)? removeExpense,
+    TResult? Function(int index, Tax value)? updateTax,
+  }) {
+    return updateTax?.call(index, value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Expense> expenses)? load,
+    TResult Function(int index)? removeExpense,
+    TResult Function(int index, Tax value)? updateTax,
+    required TResult orElse(),
+  }) {
+    if (updateTax != null) {
+      return updateTax(index, value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Load value) load,
+    required TResult Function(_RemoveExpense value) removeExpense,
+    required TResult Function(_UpdateTax value) updateTax,
+  }) {
+    return updateTax(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Load value)? load,
+    TResult? Function(_RemoveExpense value)? removeExpense,
+    TResult? Function(_UpdateTax value)? updateTax,
+  }) {
+    return updateTax?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Load value)? load,
+    TResult Function(_RemoveExpense value)? removeExpense,
+    TResult Function(_UpdateTax value)? updateTax,
+    required TResult orElse(),
+  }) {
+    if (updateTax != null) {
+      return updateTax(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateTax implements SetExpenseEvent {
+  const factory _UpdateTax(final int index, final Tax value) = _$UpdateTaxImpl;
+
+  int get index;
+  Tax get value;
+  @JsonKey(ignore: true)
+  _$$UpdateTaxImplCopyWith<_$UpdateTaxImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

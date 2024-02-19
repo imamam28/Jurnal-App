@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:journal/const/app_color.dart';
 
 class FormWidget extends StatelessWidget {
   final IconData icon;
@@ -7,6 +6,9 @@ class FormWidget extends StatelessWidget {
   final String placeholder;
   final String? value;
   final void Function() onTap;
+  final Color color;
+  final bool addPadding;
+  final bool addDivider;
   const FormWidget({
     super.key,
     required this.icon,
@@ -14,6 +16,9 @@ class FormWidget extends StatelessWidget {
     required this.placeholder,
     required this.value,
     required this.onTap,
+    this.addPadding = true,
+    this.addDivider = true,
+    this.color = Colors.white,
   });
 
   @override
@@ -21,22 +26,24 @@ class FormWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           border: Border(
-            bottom: BorderSide(color: Colors.white30),
+            bottom: addDivider
+                ? const BorderSide(color: Colors.white30)
+                : BorderSide.none,
           ),
         ),
-        margin: const EdgeInsets.only(left: 24),
+        margin: EdgeInsets.only(left: addPadding ? 24 : 0),
         child: Padding(
-          padding: const EdgeInsets.only(right: 24, bottom: 12),
+          padding: EdgeInsets.only(right: addPadding ? 24 : 0, bottom: 12),
           child: Row(
             children: [
-              Icon(icon, color: AppColor.white),
+              Icon(icon, color: color),
               const SizedBox(width: 12),
               Text(
                 label,
-                style: const TextStyle(
-                  color: AppColor.white,
+                style: TextStyle(
+                  color: color,
                 ),
               ),
               const SizedBox(width: 12),
@@ -45,9 +52,9 @@ class FormWidget extends StatelessWidget {
                 value == null ? placeholder : value!,
                 style: value == null
                     ? TextStyle(
-                        color: AppColor.white.withOpacity(0.3),
+                        color: color.withOpacity(0.3),
                       )
-                    : const TextStyle(color: AppColor.white),
+                    : TextStyle(color: color),
               ),
             ],
           ),

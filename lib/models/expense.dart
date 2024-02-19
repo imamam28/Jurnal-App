@@ -1,8 +1,15 @@
+import 'package:flutter/material.dart';
+
+import 'tax.dart';
+
 class Expense {
   int? expenseId;
   final int id;
   final String name;
   final String description;
+  TextEditingController? noteController;
+  TextEditingController? costController;
+  Tax? tax;
   String note;
   double cost;
 
@@ -14,6 +21,28 @@ class Expense {
     this.cost = 0,
     this.note = '',
   });
+  
+
+  Expense copyWith({
+    int? expenseId,
+    int? id,
+    String? name,
+    String? description,
+    TextEditingController? noteController,
+    TextEditingController? costController,
+    Tax? tax,
+    String? note,
+    double? cost,
+  }) {
+    return Expense(
+      expenseId: expenseId ?? this.expenseId,
+      id: id ?? this.id,
+      name: name ?? this.name,
+      description: description ?? this.description,
+      note: note ?? this.note,
+      cost: cost ?? this.cost,
+    );
+  }
 }
 
 List<Expense> dummyExpense = [

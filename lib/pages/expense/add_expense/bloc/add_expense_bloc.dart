@@ -25,6 +25,9 @@ class AddExpenseBloc extends Bloc<AddExpenseEvent, AddExpenseState> {
     on<_UpdateCanPayLater>(
       (event, emit) => emit(state.copyWith(canPaylater: event.value)),
     );
+    on<_UpdateShowOther>(
+      (event, emit) => emit(state.copyWith(isShowOther: event.value)),
+    );
     on<_UpdatePaymentMethod>(
       (event, emit) => emit(state.copyWith(paymentMethod: event.value)),
     );
@@ -38,7 +41,13 @@ class AddExpenseBloc extends Bloc<AddExpenseEvent, AddExpenseState> {
       (event, emit) => emit(state.copyWith(customer: event.value)),
     );
     on<_UpdateExpenses>(
-      (event, emit) => emit(state.copyWith(expenses: event.values)),
+      (event, emit) {
+        emit(state.copyWith(status: AddExpenseStatus.loading));
+        emit(state.copyWith(
+          status: AddExpenseStatus.success,
+          expenses: event.values,
+        ));
+      },
     );
   }
 }

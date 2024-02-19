@@ -50,7 +50,7 @@ class _SelectExpensePageState extends State<SelectExpensePage> {
               Navigator.pop(
                   context,
                   dummyExpense[index]
-                    ..expenseId = Random().nextInt(100000000) + 1);
+                      .copyWith(expenseId: Random().nextInt(100000000) + 1));
             },
           );
         },

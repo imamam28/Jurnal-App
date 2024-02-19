@@ -1,6 +1,9 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:journal/models/expense.dart';
+import 'package:journal/models/tax.dart';
+import 'package:journal/utils/formatter/number_formatter.dart';
 
 part 'set_expense_event.dart';
 part 'set_expense_state.dart';
@@ -13,7 +16,13 @@ class SetExpenseBloc extends Bloc<SetExpenseEvent, SetExpenseState> {
       emit(
         SetExpenseState.loaded(
           status: SetExpenseStatus.loaded,
-          expenses: event.expenses,
+          expenses: event.expenses.map((e) {
+            e.noteController = TextEditingController(text: e.note);
+            e.costController = TextEditingController(
+              text: NumberFormatter.formatCurrencyWithoutSymbol(e.cost),
+            );
+            return e;
+          }).toList(),
         ),
       );
     });
@@ -22,7 +31,14 @@ class SetExpenseBloc extends Bloc<SetExpenseEvent, SetExpenseState> {
       emit(currenState.copyWith(status: SetExpenseStatus.update));
       List<Expense> expenses = currenState.expenses.toList();
       expenses.removeAt(event.index);
-      emit(currenState.copyWith(status: SetExpenseStatus.loaded, expenses: expenses));
+      emit(currenState.copyWith(
+          status: SetExpenseStatus.loaded, expenses: expenses));
+    });
+    on<_UpdateTax>((event, emit) {
+      SetExpenseLoadedState currenState = (state as SetExpenseLoadedState);
+      emit(currenState.copyWith(status: SetExpenseStatus.update));
+      currenState.expenses[event.index].tax = event.value;
+      emit(currenState.copyWith(status: SetExpenseStatus.loaded));
     });
   }
 }

@@ -10,6 +10,8 @@ class AddExpenseEvent with _$AddExpenseEvent {
       _UpdateNoExpense;
   const factory AddExpenseEvent.updateCanPayLater(bool value) =
       _UpdateCanPayLater;
+  const factory AddExpenseEvent.updateShowOther(bool value) =
+      _UpdateShowOther;
   const factory AddExpenseEvent.updatePaymentMethod(PaymentMethod value) =
       _UpdatePaymentMethod;
   const factory AddExpenseEvent.updateTermOfPayment(TermOfPayment value) =

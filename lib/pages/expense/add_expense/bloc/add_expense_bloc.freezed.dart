@@ -22,6 +22,7 @@ mixin _$AddExpenseEvent {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -35,6 +36,7 @@ mixin _$AddExpenseEvent {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -48,6 +50,7 @@ mixin _$AddExpenseEvent {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -63,6 +66,7 @@ mixin _$AddExpenseEvent {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -76,6 +80,7 @@ mixin _$AddExpenseEvent {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -89,6 +94,7 @@ mixin _$AddExpenseEvent {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -187,6 +193,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -203,6 +210,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -219,6 +227,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -240,6 +249,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -256,6 +266,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -272,6 +283,7 @@ class _$UpdateTransactionDateImpl implements _UpdateTransactionDate {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -364,6 +376,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -380,6 +393,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -396,6 +410,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -417,6 +432,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -433,6 +449,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -449,6 +466,7 @@ class _$UpdateDueDateImpl implements _UpdateDueDate {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -541,6 +559,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -557,6 +576,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -573,6 +593,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -594,6 +615,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -610,6 +632,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -626,6 +649,7 @@ class _$UpdateNoExpenseImpl implements _UpdateNoExpense {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -718,6 +742,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -734,6 +759,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -750,6 +776,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -771,6 +798,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -787,6 +815,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -803,6 +832,7 @@ class _$UpdateCanPayLaterImpl implements _UpdateCanPayLater {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -823,6 +853,189 @@ abstract class _UpdateCanPayLater implements AddExpenseEvent {
   bool get value;
   @JsonKey(ignore: true)
   _$$UpdateCanPayLaterImplCopyWith<_$UpdateCanPayLaterImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateShowOtherImplCopyWith<$Res> {
+  factory _$$UpdateShowOtherImplCopyWith(_$UpdateShowOtherImpl value,
+          $Res Function(_$UpdateShowOtherImpl) then) =
+      __$$UpdateShowOtherImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool value});
+}
+
+/// @nodoc
+class __$$UpdateShowOtherImplCopyWithImpl<$Res>
+    extends _$AddExpenseEventCopyWithImpl<$Res, _$UpdateShowOtherImpl>
+    implements _$$UpdateShowOtherImplCopyWith<$Res> {
+  __$$UpdateShowOtherImplCopyWithImpl(
+      _$UpdateShowOtherImpl _value, $Res Function(_$UpdateShowOtherImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$UpdateShowOtherImpl(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateShowOtherImpl implements _UpdateShowOther {
+  const _$UpdateShowOtherImpl(this.value);
+
+  @override
+  final bool value;
+
+  @override
+  String toString() {
+    return 'AddExpenseEvent.updateShowOther(value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateShowOtherImpl &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateShowOtherImplCopyWith<_$UpdateShowOtherImpl> get copyWith =>
+      __$$UpdateShowOtherImplCopyWithImpl<_$UpdateShowOtherImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(DateTime date) updateTransactionDate,
+    required TResult Function(DateTime date) updateDueDate,
+    required TResult Function(String value) updateNoExpense,
+    required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
+    required TResult Function(PaymentMethod value) updatePaymentMethod,
+    required TResult Function(TermOfPayment value) updateTermOfPayment,
+    required TResult Function(CoA value) updateCoA,
+    required TResult Function(Customer value) updateCustomer,
+    required TResult Function(List<Expense> values) updateExpense,
+  }) {
+    return updateShowOther(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(DateTime date)? updateTransactionDate,
+    TResult? Function(DateTime date)? updateDueDate,
+    TResult? Function(String value)? updateNoExpense,
+    TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
+    TResult? Function(PaymentMethod value)? updatePaymentMethod,
+    TResult? Function(TermOfPayment value)? updateTermOfPayment,
+    TResult? Function(CoA value)? updateCoA,
+    TResult? Function(Customer value)? updateCustomer,
+    TResult? Function(List<Expense> values)? updateExpense,
+  }) {
+    return updateShowOther?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(DateTime date)? updateTransactionDate,
+    TResult Function(DateTime date)? updateDueDate,
+    TResult Function(String value)? updateNoExpense,
+    TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
+    TResult Function(PaymentMethod value)? updatePaymentMethod,
+    TResult Function(TermOfPayment value)? updateTermOfPayment,
+    TResult Function(CoA value)? updateCoA,
+    TResult Function(Customer value)? updateCustomer,
+    TResult Function(List<Expense> values)? updateExpense,
+    required TResult orElse(),
+  }) {
+    if (updateShowOther != null) {
+      return updateShowOther(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_UpdateTransactionDate value)
+        updateTransactionDate,
+    required TResult Function(_UpdateDueDate value) updateDueDate,
+    required TResult Function(_UpdateNoExpense value) updateNoExpense,
+    required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
+    required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
+    required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
+    required TResult Function(_UpdateCoA value) updateCoA,
+    required TResult Function(_UpdateCustomer value) updateCustomer,
+    required TResult Function(_UpdateExpenses value) updateExpense,
+  }) {
+    return updateShowOther(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_UpdateTransactionDate value)? updateTransactionDate,
+    TResult? Function(_UpdateDueDate value)? updateDueDate,
+    TResult? Function(_UpdateNoExpense value)? updateNoExpense,
+    TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
+    TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
+    TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
+    TResult? Function(_UpdateCoA value)? updateCoA,
+    TResult? Function(_UpdateCustomer value)? updateCustomer,
+    TResult? Function(_UpdateExpenses value)? updateExpense,
+  }) {
+    return updateShowOther?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_UpdateTransactionDate value)? updateTransactionDate,
+    TResult Function(_UpdateDueDate value)? updateDueDate,
+    TResult Function(_UpdateNoExpense value)? updateNoExpense,
+    TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
+    TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
+    TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
+    TResult Function(_UpdateCoA value)? updateCoA,
+    TResult Function(_UpdateCustomer value)? updateCustomer,
+    TResult Function(_UpdateExpenses value)? updateExpense,
+    required TResult orElse(),
+  }) {
+    if (updateShowOther != null) {
+      return updateShowOther(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateShowOther implements AddExpenseEvent {
+  const factory _UpdateShowOther(final bool value) = _$UpdateShowOtherImpl;
+
+  bool get value;
+  @JsonKey(ignore: true)
+  _$$UpdateShowOtherImplCopyWith<_$UpdateShowOtherImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -895,6 +1108,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -911,6 +1125,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -927,6 +1142,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -948,6 +1164,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -964,6 +1181,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -980,6 +1198,7 @@ class _$UpdatePaymentMethodImpl implements _UpdatePaymentMethod {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -1073,6 +1292,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -1089,6 +1309,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -1105,6 +1326,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -1126,6 +1348,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -1142,6 +1365,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -1158,6 +1382,7 @@ class _$UpdateTermOfPaymentImpl implements _UpdateTermOfPayment {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -1250,6 +1475,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -1266,6 +1492,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -1282,6 +1509,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -1303,6 +1531,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -1319,6 +1548,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -1335,6 +1565,7 @@ class _$UpdateCoAImpl implements _UpdateCoA {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -1427,6 +1658,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -1443,6 +1675,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -1459,6 +1692,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -1480,6 +1714,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -1496,6 +1731,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -1512,6 +1748,7 @@ class _$UpdateCustomerImpl implements _UpdateCustomer {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -1610,6 +1847,7 @@ class _$UpdateExpensesImpl implements _UpdateExpenses {
     required TResult Function(DateTime date) updateDueDate,
     required TResult Function(String value) updateNoExpense,
     required TResult Function(bool value) updateCanPayLater,
+    required TResult Function(bool value) updateShowOther,
     required TResult Function(PaymentMethod value) updatePaymentMethod,
     required TResult Function(TermOfPayment value) updateTermOfPayment,
     required TResult Function(CoA value) updateCoA,
@@ -1626,6 +1864,7 @@ class _$UpdateExpensesImpl implements _UpdateExpenses {
     TResult? Function(DateTime date)? updateDueDate,
     TResult? Function(String value)? updateNoExpense,
     TResult? Function(bool value)? updateCanPayLater,
+    TResult? Function(bool value)? updateShowOther,
     TResult? Function(PaymentMethod value)? updatePaymentMethod,
     TResult? Function(TermOfPayment value)? updateTermOfPayment,
     TResult? Function(CoA value)? updateCoA,
@@ -1642,6 +1881,7 @@ class _$UpdateExpensesImpl implements _UpdateExpenses {
     TResult Function(DateTime date)? updateDueDate,
     TResult Function(String value)? updateNoExpense,
     TResult Function(bool value)? updateCanPayLater,
+    TResult Function(bool value)? updateShowOther,
     TResult Function(PaymentMethod value)? updatePaymentMethod,
     TResult Function(TermOfPayment value)? updateTermOfPayment,
     TResult Function(CoA value)? updateCoA,
@@ -1663,6 +1903,7 @@ class _$UpdateExpensesImpl implements _UpdateExpenses {
     required TResult Function(_UpdateDueDate value) updateDueDate,
     required TResult Function(_UpdateNoExpense value) updateNoExpense,
     required TResult Function(_UpdateCanPayLater value) updateCanPayLater,
+    required TResult Function(_UpdateShowOther value) updateShowOther,
     required TResult Function(_UpdatePaymentMethod value) updatePaymentMethod,
     required TResult Function(_UpdateTermOfPayment value) updateTermOfPayment,
     required TResult Function(_UpdateCoA value) updateCoA,
@@ -1679,6 +1920,7 @@ class _$UpdateExpensesImpl implements _UpdateExpenses {
     TResult? Function(_UpdateDueDate value)? updateDueDate,
     TResult? Function(_UpdateNoExpense value)? updateNoExpense,
     TResult? Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult? Function(_UpdateShowOther value)? updateShowOther,
     TResult? Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult? Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult? Function(_UpdateCoA value)? updateCoA,
@@ -1695,6 +1937,7 @@ class _$UpdateExpensesImpl implements _UpdateExpenses {
     TResult Function(_UpdateDueDate value)? updateDueDate,
     TResult Function(_UpdateNoExpense value)? updateNoExpense,
     TResult Function(_UpdateCanPayLater value)? updateCanPayLater,
+    TResult Function(_UpdateShowOther value)? updateShowOther,
     TResult Function(_UpdatePaymentMethod value)? updatePaymentMethod,
     TResult Function(_UpdateTermOfPayment value)? updateTermOfPayment,
     TResult Function(_UpdateCoA value)? updateCoA,
@@ -1729,6 +1972,7 @@ mixin _$AddExpenseState {
   @DatetimeSerializer()
   DateTime? get dueDate => throw _privateConstructorUsedError;
   bool get canPaylater => throw _privateConstructorUsedError;
+  bool get isShowOther => throw _privateConstructorUsedError;
   PaymentMethod? get paymentMethod => throw _privateConstructorUsedError;
   CoA? get coA => throw _privateConstructorUsedError;
   TermOfPayment? get termOfPayment => throw _privateConstructorUsedError;
@@ -1752,6 +1996,7 @@ abstract class $AddExpenseStateCopyWith<$Res> {
       @DatetimeSerializer() DateTime transactionDate,
       @DatetimeSerializer() DateTime? dueDate,
       bool canPaylater,
+      bool isShowOther,
       PaymentMethod? paymentMethod,
       CoA? coA,
       TermOfPayment? termOfPayment,
@@ -1777,6 +2022,7 @@ class _$AddExpenseStateCopyWithImpl<$Res, $Val extends AddExpenseState>
     Object? transactionDate = null,
     Object? dueDate = freezed,
     Object? canPaylater = null,
+    Object? isShowOther = null,
     Object? paymentMethod = freezed,
     Object? coA = freezed,
     Object? termOfPayment = freezed,
@@ -1806,6 +2052,10 @@ class _$AddExpenseStateCopyWithImpl<$Res, $Val extends AddExpenseState>
       canPaylater: null == canPaylater
           ? _value.canPaylater
           : canPaylater // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isShowOther: null == isShowOther
+          ? _value.isShowOther
+          : isShowOther // ignore: cast_nullable_to_non_nullable
               as bool,
       paymentMethod: freezed == paymentMethod
           ? _value.paymentMethod
@@ -1842,6 +2092,7 @@ abstract class _$$AddExpenseStateImplCopyWith<$Res>
       @DatetimeSerializer() DateTime transactionDate,
       @DatetimeSerializer() DateTime? dueDate,
       bool canPaylater,
+      bool isShowOther,
       PaymentMethod? paymentMethod,
       CoA? coA,
       TermOfPayment? termOfPayment,
@@ -1865,6 +2116,7 @@ class __$$AddExpenseStateImplCopyWithImpl<$Res>
     Object? transactionDate = null,
     Object? dueDate = freezed,
     Object? canPaylater = null,
+    Object? isShowOther = null,
     Object? paymentMethod = freezed,
     Object? coA = freezed,
     Object? termOfPayment = freezed,
@@ -1894,6 +2146,10 @@ class __$$AddExpenseStateImplCopyWithImpl<$Res>
       canPaylater: null == canPaylater
           ? _value.canPaylater
           : canPaylater // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isShowOther: null == isShowOther
+          ? _value.isShowOther
+          : isShowOther // ignore: cast_nullable_to_non_nullable
               as bool,
       paymentMethod: freezed == paymentMethod
           ? _value.paymentMethod
@@ -1925,6 +2181,7 @@ class _$AddExpenseStateImpl extends _AddExpenseState {
       @DatetimeSerializer() required this.transactionDate,
       @DatetimeSerializer() this.dueDate,
       this.canPaylater = false,
+      this.isShowOther = false,
       this.paymentMethod,
       this.coA,
       this.termOfPayment,
@@ -1950,6 +2207,9 @@ class _$AddExpenseStateImpl extends _AddExpenseState {
   @JsonKey()
   final bool canPaylater;
   @override
+  @JsonKey()
+  final bool isShowOther;
+  @override
   final PaymentMethod? paymentMethod;
   @override
   final CoA? coA;
@@ -1966,7 +2226,7 @@ class _$AddExpenseStateImpl extends _AddExpenseState {
 
   @override
   String toString() {
-    return 'AddExpenseState(no: $no, status: $status, customer: $customer, transactionDate: $transactionDate, dueDate: $dueDate, canPaylater: $canPaylater, paymentMethod: $paymentMethod, coA: $coA, termOfPayment: $termOfPayment, expenses: $expenses)';
+    return 'AddExpenseState(no: $no, status: $status, customer: $customer, transactionDate: $transactionDate, dueDate: $dueDate, canPaylater: $canPaylater, isShowOther: $isShowOther, paymentMethod: $paymentMethod, coA: $coA, termOfPayment: $termOfPayment, expenses: $expenses)';
   }
 
   @override
@@ -1983,6 +2243,8 @@ class _$AddExpenseStateImpl extends _AddExpenseState {
             (identical(other.dueDate, dueDate) || other.dueDate == dueDate) &&
             (identical(other.canPaylater, canPaylater) ||
                 other.canPaylater == canPaylater) &&
+            (identical(other.isShowOther, isShowOther) ||
+                other.isShowOther == isShowOther) &&
             (identical(other.paymentMethod, paymentMethod) ||
                 other.paymentMethod == paymentMethod) &&
             (identical(other.coA, coA) || other.coA == coA) &&
@@ -2000,6 +2262,7 @@ class _$AddExpenseStateImpl extends _AddExpenseState {
       transactionDate,
       dueDate,
       canPaylater,
+      isShowOther,
       paymentMethod,
       coA,
       termOfPayment,
@@ -2021,6 +2284,7 @@ abstract class _AddExpenseState extends AddExpenseState {
       @DatetimeSerializer() required final DateTime transactionDate,
       @DatetimeSerializer() final DateTime? dueDate,
       final bool canPaylater,
+      final bool isShowOther,
       final PaymentMethod? paymentMethod,
       final CoA? coA,
       final TermOfPayment? termOfPayment,
@@ -2041,6 +2305,8 @@ abstract class _AddExpenseState extends AddExpenseState {
   DateTime? get dueDate;
   @override
   bool get canPaylater;
+  @override
+  bool get isShowOther;
   @override
   PaymentMethod? get paymentMethod;
   @override

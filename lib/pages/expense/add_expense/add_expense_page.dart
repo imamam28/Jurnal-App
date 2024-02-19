@@ -390,8 +390,6 @@ class _AddExpensePageState extends State<AddExpensePage> {
             ),
             const SizedBox(height: 24),
             BlocBuilder<AddExpenseBloc, AddExpenseState>(
-              buildWhen: (previous, current) =>
-                  previous.expenses != current.expenses,
               builder: (context, state) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -425,6 +423,7 @@ class _AddExpensePageState extends State<AddExpensePage> {
                                   if (value != null) {
                                     context.read<AddExpenseBloc>().add(
                                         AddExpenseEvent.updateExpense(value));
+                                    setState(() {});
                                   }
                                 });
                               },
@@ -547,110 +546,136 @@ class _AddExpensePageState extends State<AddExpensePage> {
               },
             ),
             const SizedBox(height: 16),
-            Container(
-              color: Colors.grey.shade100,
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              child: Column(
-                children: [
-                  const _DetailWidget(
-                    label: 'Subtotal',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.grey,
-                    ),
-                    value: 'Rp. 0,00',
-                    valueStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.grey,
-                    ),
-                  ),
-                  const _DetailWidget(
-                    isShow: true,
-                    showIcon: true,
-                    label: 'Jumlah lainnya',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.accent,
-                    ),
-                    value: 'Rp. 0,00',
-                    valueStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.accent,
-                    ),
-                  ),
-                  Container(
-                    color: Colors.grey.shade300,
-                    padding: const EdgeInsets.only(
-                      left: 16,
-                      top: 12,
-                      bottom: 12,
-                    ),
-                    child: const _DetailWidget(
-                      label: 'Pemotongan',
-                      labelStyle: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: AppColor.accent,
+            BlocBuilder<AddExpenseBloc, AddExpenseState>(
+              builder: (context, state) {
+                return Container(
+                  color: Colors.grey.shade100,
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Column(
+                    children: [
+                      _DetailWidget(
+                        label: 'Subtotal',
+                        labelStyle: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.grey,
+                        ),
+                        value: NumberFormatter.formatCurrency(
+                          state.total,
+                        ),
+                        valueStyle: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.grey,
+                        ),
                       ),
-                      value: 'Rp. 0,00',
-                      valueStyle: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: AppColor.grey,
+                      BlocBuilder<AddExpenseBloc, AddExpenseState>(
+                        builder: (context, state) {
+                          return Column(
+                            children: [
+                              _DetailWidget(
+                                isShow: state.isShowOther,
+                                showIcon: true,
+                                label: 'Jumlah lainnya',
+                                labelStyle: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColor.accent,
+                                ),
+                                value: NumberFormatter.formatCurrency(
+                                  0,
+                                ),
+                                valueStyle: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColor.accent,
+                                ),
+                                onTap: () {
+                                  context.read<AddExpenseBloc>().add(
+                                      AddExpenseEvent.updateShowOther(
+                                          !state.isShowOther));
+                                },
+                              ),
+                              if (state.isShowOther)
+                                Container(
+                                  color: Colors.grey.shade300,
+                                  padding: const EdgeInsets.only(
+                                    left: 16,
+                                    top: 12,
+                                    bottom: 12,
+                                  ),
+                                  child: _DetailWidget(
+                                    label: 'Pemotongan',
+                                    labelStyle: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.accent,
+                                    ),
+                                    value: NumberFormatter.formatCurrency(
+                                      0,
+                                    ),
+                                    valueStyle: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.grey,
+                                    ),
+                                  ),
+                                ),
+                              const SizedBox(height: 12),
+                            ],
+                          );
+                        },
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  const _DetailWidget(
-                    label: 'Sisa tagihan',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                    value: 'Rp. 0,00',
-                    valueStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  _DetailWidget(
-                    label: 'Info Lainnya',
-                    labelStyle: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                    value: 'Ubah',
-                    valueStyle: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.accent.shade700,
-                      fontSize: 16,
-                    ),
-                    onTap: () {
-                      AppSnackbar.warning(
-                        context,
-                        'Undeveloped. Dummy project',
-                      );
-                    },
-                  ),
-                  const SizedBox(height: 12),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: TextButton.icon(
-                        onPressed: () {
+                      _DetailWidget(
+                        label: 'Sisa tagihan',
+                        labelStyle: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                        value: NumberFormatter.formatCurrency(
+                          state.total,
+                        ),
+                        valueStyle: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      _DetailWidget(
+                        label: 'Info Lainnya',
+                        labelStyle: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                        value: 'Ubah',
+                        valueStyle: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.accent.shade700,
+                          fontSize: 16,
+                        ),
+                        onTap: () {
                           AppSnackbar.warning(
                             context,
                             'Undeveloped. Dummy project',
                           );
                         },
-                        icon: const Icon(Icons.add_circle_sharp),
-                        label: const Text('Tambahan info lainnya'),
                       ),
-                    ),
+                      const SizedBox(height: 12),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: TextButton.icon(
+                            onPressed: () {
+                              AppSnackbar.warning(
+                                context,
+                                'Undeveloped. Dummy project',
+                              );
+                            },
+                            icon: const Icon(Icons.add_circle_sharp),
+                            label: const Text('Tambahan info lainnya'),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
                   ),
-                  const SizedBox(height: 12),
-                ],
-              ),
+                );
+              },
             )
           ],
         ),
